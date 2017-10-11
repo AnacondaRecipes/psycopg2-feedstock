@@ -17,10 +17,12 @@ build:
   script: python setup.py install  # [win]
 
 requirements:
-  build:
+  host:
     - python
     - openssl 1.0.*
     - postgresql
+  build:
+    - {{ compiler('c') }}
   run:
     - python
     # libpq is a repackaging of only the library to connect to postgres
