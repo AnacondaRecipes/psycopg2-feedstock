@@ -15,18 +15,16 @@ build:
   script: python -m pip install --no-deps --ignore-installed .  # [win]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - pip
-    - openssl 1.0.*
+    - openssl
     - postgresql
-  build:
-    - {{ compiler('c') }}
   run:
     - python
-    # libpq is a repackaging of only the library to connect to postgres
-    - libpq
-    - openssl 1.0.*
+    # libpq and openssl are added via run_exports
 
 test:
   imports:
