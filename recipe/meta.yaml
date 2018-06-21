@@ -9,12 +9,9 @@ source:
   sha256: eccf962d41ca46e6326b97c8fe0a6687b58dfc1a5f6540ed071ff1474cea749e
   patches:
     - have_openssl.patch
-    # Python 3.7 compat: async => async_
-    # https://github.com/psycopg/psycopg2/commit/ef64493b8913e4069c4422ad14da6de405c445f6.patch
-    - ef64493b8913e4069c4422ad14da6de405c445f6.patch
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .  # [win]
 
 requirements:
@@ -25,9 +22,9 @@ requirements:
     - pip
     - openssl
     - postgresql
-    - libpq
   run:
     - python
+    # libpq and openssl are added via run_exports
 
 test:
   imports:
