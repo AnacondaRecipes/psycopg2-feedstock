@@ -22,6 +22,7 @@ requirements:
     - pip
     - openssl
     - postgresql
+    - libpq
   run:
     - python
     # libpq and openssl are added via run_exports
