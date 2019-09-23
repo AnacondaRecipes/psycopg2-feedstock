@@ -9,7 +9,7 @@ source:
   sha256: 897a6e838319b4bf648a574afb6cabcb17d0488f8c7195100d48d872419f4457
   patches:
     - have_openssl.patch
-    - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
+    # - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
 
 build:
   number: 0
