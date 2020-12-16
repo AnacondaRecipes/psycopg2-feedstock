@@ -12,7 +12,9 @@ source:
     # - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
 
 build:
-  number: 0
+  number: 1
+  ignore_run_exports:
+    - openssl
 
 requirements:
   build:
@@ -25,7 +27,6 @@ requirements:
   run:
     - python
     - libpq
-    - openssl
 
 test:
   imports:
