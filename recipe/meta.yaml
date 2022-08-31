@@ -12,9 +12,10 @@ source:
     # - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     - openssl
+    - krb5  # [win]
 
 requirements:
   build:
@@ -26,6 +27,7 @@ requirements:
     - pip
     - openssl
     - postgresql
+    - krb5  # [win]
   run:
     - python
     - libpq
