@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://www.psycopg.org/
-  license: LGPL, BSD-like, ZPL
+  license: LGPL-3.0-or-later AND Other
   license_family: LGPL
   license_file: LICENSE
   summary: PostgreSQL database adapter for Python
