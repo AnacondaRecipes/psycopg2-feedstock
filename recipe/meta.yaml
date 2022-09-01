@@ -38,7 +38,7 @@ test:
     - psycopg2._psycopg
 
 about:
-  home: http://initd.org/psycopg/
+  home: https://www.psycopg.org/
   license: LGPL, BSD-like, ZPL
   license_family: LGPL
   license_file: LICENSE
@@ -47,7 +47,7 @@ about:
     Psycopg is the most popular PostgreSQL adapter for the Python programming
     language. Its main features are the complete implementation of the Python DB
     API 2.0 specification and the thread safety.
-  doc_url: http://initd.org/psycopg/docs/
+  doc_url: https://www.psycopg.org/docs/
   doc_source_url: https://github.com/psycopg/psycopg2/blob/master/doc/src/index.rst
   dev_url: https://github.com/psycopg/psycopg2/
 
