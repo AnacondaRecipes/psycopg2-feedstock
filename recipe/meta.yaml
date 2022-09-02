@@ -12,9 +12,10 @@ source:
     # - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     - openssl
+    - krb5  # [win]
 
 requirements:
   build:
@@ -26,9 +27,11 @@ requirements:
     - pip
     - openssl
     - postgresql
+    - krb5  # [win]
   run:
     - python
     - libpq
+    - krb5  # [win]
 
 test:
   imports:
@@ -36,8 +39,8 @@ test:
     - psycopg2._psycopg
 
 about:
-  home: http://initd.org/psycopg/
-  license: LGPL, BSD-like, ZPL
+  home: https://www.psycopg.org/
+  license: LGPL-3.0-or-later AND Other
   license_family: LGPL
   license_file: LICENSE
   summary: PostgreSQL database adapter for Python
@@ -45,7 +48,7 @@ about:
     Psycopg is the most popular PostgreSQL adapter for the Python programming
     language. Its main features are the complete implementation of the Python DB
     API 2.0 specification and the thread safety.
-  doc_url: http://initd.org/psycopg/docs/
+  doc_url: https://www.psycopg.org/docs/
   doc_source_url: https://github.com/psycopg/psycopg2/blob/master/doc/src/index.rst
   dev_url: https://github.com/psycopg/psycopg2/
 
