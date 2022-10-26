@@ -1,4 +1,4 @@
-{% set version = "2.8.6" %}
+{% set version = "2.9.3" %}
 
 package:
   name: psycopg2
@@ -6,13 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/psycopg2/psycopg2-{{ version }}.tar.gz
-  sha256: fb23f6c71107c37fd667cb4ea363ddeb936b348bbd6449278eb92c189699f543
+  sha256: 8e841d1bf3434da985cc5ef13e6f75c8981ced601fd70cc6bf33351b91562981
   patches:
     - have_openssl.patch
-    # - 0001-fix-library-names-for-openssl-1.1.1-on-win.patch
 
 build:
-  number: 2
+  number: 0
   ignore_run_exports:
     - openssl
     - krb5  # [win]
@@ -27,6 +26,7 @@ requirements:
     - pip
     - openssl
     - postgresql
+    - wheel
     - krb5  # [win]
   run:
     - python
@@ -37,12 +37,17 @@ test:
   imports:
     - psycopg2
     - psycopg2._psycopg
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://www.psycopg.org/
-  license: LGPL-3.0-or-later AND Other
+  license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: LICENSE
+  license_url: https://github.com/psycopg/psycopg2/blob/master/LICENSE
   summary: PostgreSQL database adapter for Python
   description: |
     Psycopg is the most popular PostgreSQL adapter for the Python programming
