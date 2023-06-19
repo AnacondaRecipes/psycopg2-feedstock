@@ -1,4 +1,5 @@
-aggregate_branch: openssl3_builds
+channels:
+  jcmorin-ana-org: psql
 
 build_parameters:
   - "--suppress-variables"

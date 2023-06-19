@@ -11,10 +11,7 @@ source:
     - have_openssl.patch
 
 build:
-  number: 0
-  ignore_run_exports:
-    - openssl
-    - krb5  # [win]
+  number: 1
 
 requirements:
   build:
@@ -25,16 +22,11 @@ requirements:
     - python
     - pip
     - wheel
-    # It's technically not required by the code, but the do excplitly link with -lcrypto.
-    # The linker is smart enough to not actually link it since no openssl symbol is directly used,
-    # hence why we also ad it to ignore_run_exports.
-    - openssl {{ openssl }}  # [not linux]
+    - setuptools
     - libpq 12.15
-    - krb5 1.20.1  # [win]
   run:
     - python
     - libpq
-    - krb5  # [win]
 
 test:
   imports:
