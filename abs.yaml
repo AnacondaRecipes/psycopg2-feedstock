@@ -1,6 +1,3 @@
-channels:
-  jcmorin-ana-org: psql
-
 build_parameters:
   - "--suppress-variables"
   #- "--skip-existing"
