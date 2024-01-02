@@ -11,7 +11,8 @@ source:
     - have_openssl.patch
 
 build:
-  number: 1
+  skip: true  # [py<37]
+  number: 0
 
 requirements:
   build:
