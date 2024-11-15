@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [py<37]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -24,10 +24,10 @@ requirements:
     - pip
     - wheel
     - setuptools
-    - libpq 12.15
+    - libpq 17.0
   run:
     - python
-    - libpq
+    - libpq  # Version pinned from libpq run_exports.
 
 test:
   imports:
