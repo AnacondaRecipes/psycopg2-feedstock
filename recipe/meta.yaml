@@ -35,6 +35,7 @@ test:
     - psycopg2._psycopg
   commands:
     - pip check
+    - $(PYTHON) -c "import tests; tests.unittest.main(defaultTest='tests.test_suite')" --verbose
   requires:
     - pip
 
