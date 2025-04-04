@@ -33,6 +33,7 @@ test:
   imports:
     - psycopg2
     - psycopg2._psycopg
+    - 
   commands:
     - pip check
   requires:
