@@ -30,14 +30,20 @@ requirements:
     - libpq  # Version pinned from libpq run_exports.
 
 test:
+  source_files:
+    - tests
   imports:
     - psycopg2
     - psycopg2._psycopg
   commands:
     - pip check
-    - $(PYTHON) -c "import tests; tests.unittest.main(defaultTest='tests.test_suite')" --verbose
+    # Run only aggregator test suites to avoid failures from tests requiring a live PostgreSQL server.
+    # Upstream tests assume a running PostgreSQL instance on localhost, which is not available in CI.
+    - pytest tests -v -k "test_suite"
   requires:
     - pip
+    - pytest
+    - postgresql
 
 about:
   home: https://www.psycopg.org/
