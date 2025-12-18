@@ -9,7 +9,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 964d31caf728e217c697ff77ea69c2ba0865fa41ec20bb00f0977e62fdcc52e3
   patches:
-    - patches/0001-Activate-have_ssl.patch
+    - patches/have_openssl.patch
 
 build:
   skip: true  # [py<39]
