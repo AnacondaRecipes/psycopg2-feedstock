@@ -1,0 +1,12 @@
+diff --git a/setup.cfg b/setup.cfg
+index a4a1eff3..2105b700 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -1,7 +1,7 @@
+ [build_ext]
+ define = PSYCOPG_DEBUG
+ pg_config = 
+-have_ssl = 0
++have_ssl = 1
+ static_libpq = 0
+ libraries = 
