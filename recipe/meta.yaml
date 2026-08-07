@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [py<39]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - libpq 17.0
+    - libpq 18.4  # TODO: revert to placeholder / remove once set via conda_build_config.yaml
   run:
     - python
     - libpq  # Version pinned from libpq run_exports.
